@@ -28,4 +28,17 @@ public final class Constants {
         public static final int kShooterFirstMotorPort = 1;
         public static final int kShooterSecondMotorPort = 2;
     }
+
+    public static final class DriveTrainConstants {
+        public static final int kLeftRearMotorPort = 3;
+        public static final int kLeftFrontMotorPort = 4;
+        public static final int kRightRearMotorPort = 5;
+        public static final int kRightFrontMotorPort = 6;
+    }
+
+    public static final class ClimbConstants {
+        public static final int kDoubleSolenoidForwardPort = 0;
+        public static final int kDoubleSolenoidReversePort = 1;
+        public static final int kCompressorPort = 0;
+    }
 }
