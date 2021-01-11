@@ -17,11 +17,13 @@ import frc.robot.commands.Climb.OpenClimb;
 import frc.robot.commands.Climb.ToggleClimb;
 import frc.robot.commands.Climb.ToggleCompressor;
 import frc.robot.commands.DriveTrain.JoystickDrive;
+import frc.robot.commands.Hopper.RunHopper;
 import frc.robot.commands.Intake.RunIntake;
 import frc.robot.commands.Shooter.RunShooter;
 import frc.robot.subsystems.Climb;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.Hopper;
 import frc.robot.subsystems.Intake;
 import frc.robot.subsystems.Shooter;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -41,6 +43,7 @@ public class RobotContainer {
   private final Shooter m_shooter = new Shooter();
   private final DriveTrain m_driveTrain = new DriveTrain();
   private final Climb m_climb = new Climb();
+  private final Hopper m_hopper = new Hopper();
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 
@@ -71,6 +74,8 @@ public class RobotContainer {
     new JoystickButton(m_driverController, 5).whenPressed(new CloseClimb(m_climb));
     new JoystickButton(m_driverController, 6).whileHeld(new ToggleCompressor(m_climb));
     new JoystickButton(m_driverController, 7).whileHeld(new ToggleClimb(m_climb));
+    new JoystickButton(m_driverController, 8).whileHeld(new RunHopper(m_hopper, 1.0));
+    new JoystickButton(m_driverController, 9).whileHeld(new RunHopper(m_hopper, -1.0));
   }
 
   /**

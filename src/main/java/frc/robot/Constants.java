@@ -41,4 +41,9 @@ public final class Constants {
         public static final int kDoubleSolenoidReversePort = 1;
         public static final int kCompressorPort = 0;
     }
+
+    public static final class HopperConstants {
+        public static final int kHopperLowerMotorPort = 7;
+        public static final int kHopperUpperMotorPort = 8;
+    }
 }
